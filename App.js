@@ -1,14 +1,14 @@
 import React from "react";
 import { StyleSheet, View } from "react-native";
 
-import StackNavigator from "./Navigation/StackNavigation";
 import { NavigationContainer } from "@react-navigation/native";
+import TabNavigation from "./Navigation/TabNavigation";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <NavigationContainer>
-        <StackNavigator />
+        <TabNavigation />
       </NavigationContainer>
     </View>
   );
