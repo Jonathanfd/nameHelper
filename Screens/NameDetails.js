@@ -1,5 +1,6 @@
 import React from "react";
 import { View, StyleSheet, Text, Image, Platform } from "react-native";
+import Colors from "../Config/Colors";
 
 function NameDetails({ route }) {
   return (
@@ -15,7 +16,7 @@ function NameDetails({ route }) {
           style={[
             styles.title,
             {
-              color: "white",
+              color: Colors.White,
               textDecorationLine: "underline",
               margin: 5,
             },
@@ -53,7 +54,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 30,
     fontWeight: "bold",
-    color: "#C39459",
+    color: Colors.Gold,
   },
 });
 export default NameDetails;

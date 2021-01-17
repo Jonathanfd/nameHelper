@@ -11,13 +11,14 @@ import {
 import AppButton from "../Components/AppButton";
 import GenderSelector from "../Components/GenderSelector";
 import Info from "../Components/Info";
+import Colors from "../Config/Colors";
 
 function Home({ navigation }) {
   const [male, setMale] = useState(false);
   const [info, setInfo] = useState({ name: "", continent: "", country: "" });
   const [gender, setGender] = useState("f");
   const [loading, setLoading] = useState(false);
-  const color = male == false ? "#FF8BAE" : "dodgerblue";
+  const color = male == false ? Colors.Pink : Colors.Blue;
   const apiKey = "23d7fac073d5d008fe2c547046ede341";
   const request = `https://api.parser.name/?api_key=${apiKey}&endpoint=generate&gender=${gender}`;
 
@@ -98,7 +99,7 @@ function Home({ navigation }) {
         </View>
         <View style={styles.button}>
           {loading ? (
-            <ActivityIndicator size="large" color="white" />
+            <ActivityIndicator size="large" color={Colors.White} />
           ) : (
             <AppButton onPress={generateName} />
           )}
@@ -123,7 +124,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-evenly",
   },
   nameContainer: {
-    backgroundColor: "white",
+    backgroundColor: Colors.White,
     height: 150,
     width: "90%",
     borderRadius: 10,

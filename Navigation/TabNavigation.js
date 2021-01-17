@@ -2,14 +2,14 @@ import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import About from "../Screens/About";
 import StackNavigator from "./StackNavigation";
-
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Colors from "../Config/Colors";
 
 const Tab = createBottomTabNavigator();
 const TabNavigation = () => (
   <Tab.Navigator
     tabBarOptions={{
-      activeTintColor: "#C39459",
+      activeTintColor: Colors.Gold,
     }}
   >
     <Tab.Screen

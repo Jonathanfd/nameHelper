@@ -1,11 +1,12 @@
 import React from "react";
 import { View, StyleSheet, Switch, Text } from "react-native";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import Colors from "../Config/Colors";
 
 function GenderSelector({
   gender,
   genderIcon,
-  textColor = "black",
+  textColor = Colors.Black,
   value,
   onSwitch,
 }) {
@@ -14,9 +15,9 @@ function GenderSelector({
       <Switch
         onValueChange={onSwitch}
         value={value}
-        trackColor={{ false: "#FF8BAE", true: "dodgerblue" }}
-        ios_backgroundColor="#FF8BAE"
-        thumbColor="white"
+        trackColor={{ false: Colors.Pink, true: Colors.Blue }}
+        ios_backgroundColor={Colors.Pink}
+        thumbColor={Colors.White}
       />
       <View style={{ alignItems: "center" }}>
         <Text style={[styles.text, { color: textColor }]}>{gender}</Text>
