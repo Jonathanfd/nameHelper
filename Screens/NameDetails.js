@@ -5,7 +5,7 @@ function NameDetails({ route }) {
   return (
     <View style={styles.container}>
       <Image
-        source={require("../assets/nameDetails.jpg")}
+        source={require("../assets/name-details.jpg")}
         style={styles.image}
         blurRadius={Platform.OS == "android" ? 2 : 5}
       />
