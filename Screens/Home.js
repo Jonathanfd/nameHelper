@@ -93,6 +93,7 @@ function Home({ navigation }) {
             textColor={color}
             value={male}
             onSwitch={switchGender}
+            genderIcon={male ? "gender-male" : "gender-female"}
           />
         </View>
         <View style={styles.button}>
